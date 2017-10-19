@@ -30,6 +30,7 @@ COPY dockerd-entrypoint.sh /usr/local/bin/
 
 VOLUME /var/lib/docker
 EXPOSE 2375
+RUN ulimit -s unlimited
 
 ENTRYPOINT ["dockerd-entrypoint.sh"]
 CMD []
